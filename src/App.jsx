@@ -31,7 +31,7 @@ const App = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://backend-vaeh.onrender.com', {
+      const response = await fetch('https://backend-vaeh.onrender.com/translate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
