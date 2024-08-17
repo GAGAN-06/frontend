@@ -12,15 +12,15 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [languageStats, setLanguageStats] = useState({});
 
-  const apiKey = import.meta.env.VITE_OPENAI_KEY;
-  if (!apiKey) {
-    console.error("API key is missing. Please set the VITE_OPENAI_KEY environment variable.");
-  }
+  // const apiKey = import.meta.env.VITE_OPENAI_KEY;
+  // if (!apiKey) {
+  //   console.error("API key is missing. Please set the VITE_OPENAI_KEY environment variable.");
+  // }
 
-  const configuration = new Configuration({
-    apiKey: apiKey,
-  });
-  const openai = new OpenAIApi(configuration);
+  // const configuration = new Configuration({
+  //   apiKey: apiKey,
+  // });
+  // const openai = new OpenAIApi(configuration);
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -31,7 +31,7 @@ const App = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://backend-vaeh.onrender.com/translate', {
+      const response = await fetch('https://backend-vaeh.onrender.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -98,52 +98,52 @@ const App = () => {
         <div className="choices">
           <input
             type="radio"
-            id="hindi"
+            id="hi"
             name="language"
-            value="Hindi"
-            defaultChecked={formData.language === "Hindi"}
+            value="hi"
+            defaultChecked={formData.language === "hi"}
             onChange={handleInputChange}
           />
-          <label htmlFor="hindi">Hindi</label>
+          <label htmlFor="hi">Hindi</label>
 
           <input
             type="radio"
-            id="spanish"
+            id="es"
             name="language"
-            value="Spanish"
+            value="es"
             onChange={handleInputChange}
           />
-          <label htmlFor="spanish">Spanish</label>
+          <label htmlFor="es">Spanish</label>
 
           <input
             type="radio"
-            id="japanese"
+            id="ja"
             name="language"
-            value="Japanese"
+            value="ja"
             onChange={handleInputChange}
           />
-          <label htmlFor="japanese">Japanese</label>
+          <label htmlFor="ja">Japanese</label>
 
           <input
             type="radio"
-            id="french"
+            id="fr"
             name="language"
-            value="French"
-            defaultChecked={formData.language === "french"}
+            value="fr"
+            defaultChecked={formData.language === "fr"}
             onChange={handleInputChange}
           />
-          <label htmlFor="french">French</label>
+          <label htmlFor="fr">french</label>
 
 
           <input
             type="radio"
-            id="portugese"
+            id="pt"
             name="language"
-            value="Portugese"
-            defaultChecked={formData.language === "Portugese"}
+            value="pt"
+            defaultChecked={formData.language === "pt"}
             onChange={handleInputChange}
           />
-          <label htmlFor="portugese">Portugese</label>
+          <label htmlFor="pt">Portugese</label>
         </div>
 
         <div className="choices">
@@ -177,21 +177,21 @@ const App = () => {
 
           <input
             type="radio"
-            id="google-gemini-v1"
+            id="gemini-1.5-pro"
             name="model"
-            value="google-gemini-v1"
+            value="gemini-1.5-pro"
             onChange={handleInputChange}
           />
-          <label htmlFor="google-gemini-v1">Gemini v1</label>
+          <label htmlFor="gemini-1.5-pro">G-1.5 pro</label>
 
           <input
             type="radio"
-            id="google-gemini-v2"
+            id="gemini-1.5-flash"
             name="model"
-            value="google-gemini-v2"
+            value="gemini-1.5-flash"
             onChange={handleInputChange}
           />
-          <label htmlFor="google-gemini-v2">Gemini v2</label>
+          <label htmlFor="gemini-1.5-flash">G-1.5 flash</label>
 
         </div>
 
