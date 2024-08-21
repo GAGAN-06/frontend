@@ -114,6 +114,7 @@ const App = () => {
             id="es"
             name="language"
             value="es"
+            defaultChecked={formData.language === "es"}
             onChange={handleInputChange}
           />
           <label htmlFor="es">Spanish</label>
@@ -165,6 +166,7 @@ const App = () => {
             id="gpt-4"
             name="model"
             value="gpt-4"
+            defaultChecked={formData.model === "gpt-4"}
             onChange={handleInputChange}
           />
           <label htmlFor="gpt-4">GPT-4</label>
@@ -174,6 +176,7 @@ const App = () => {
             id="gpt-4-turbo"
             name="model"
             value="gpt-4-turbo"
+            defaultChecked={formData.model === "gpt-4-turbo"}
             onChange={handleInputChange}
           />
           <label htmlFor="gpt-4-turbo">GPT-4 T</label>
@@ -183,6 +186,7 @@ const App = () => {
             id="gemini-1.5-pro"
             name="model"
             value="gemini-1.5-pro"
+            defaultChecked={formData.model === "gemini-1.5-pro"}
             onChange={handleInputChange}
           />
           <label htmlFor="gemini-1.5-pro">G-1.5 pro</label>
@@ -192,6 +196,7 @@ const App = () => {
             id="gemini-1.5-flash"
             name="model"
             value="gemini-1.5-flash"
+            defaultChecked={formData.model === "gemini-1.5-flash"}
             onChange={handleInputChange}
           />
           <label htmlFor="gemini-1.5-flash">G-1.5 flash</label>
