@@ -4,6 +4,7 @@ import "./App.css";
 import { Configuration, OpenAIApi } from "openai";
 import { BeatLoader } from "react-spinners";
 
+
 const App = () => {
   const [formData, setFormData] = useState({ language: "Hindi", message: "" });
   const [error, setError] = useState("");
@@ -31,7 +32,8 @@ const App = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://backend-vaeh.onrender.com/translate', {
+      const response = await fetch('https://backend-vaeh.onrender.com', {
+        mode: "no-cors",
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
