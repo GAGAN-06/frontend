@@ -205,7 +205,7 @@ const App = () => {
             type="radio"
             id="deepl"
             name="model"
-            value="deepl"
+            value="deepl" 
             checked={formData.model === "deepl"}
             onChange={handleInputChange}
           />
