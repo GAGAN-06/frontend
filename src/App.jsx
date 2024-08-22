@@ -33,7 +33,7 @@ const App = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://backend-vaeh.onrender.com', {
+      const response = await fetch('https://backend-vaeh.onrender.com/translate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -201,6 +201,16 @@ const App = () => {
           />
           <label htmlFor="gemini-1.5-flash">G-1.5 flash</label>
 
+          <input
+            type="radio"
+            id="deepl"
+            name="model"
+            value="deepl"
+            checked={formData.model === "deepl"}
+            onChange={handleInputChange}
+          />
+          <label htmlFor="deepl">DeepL</label>
+
         </div>
 
         <textarea
@@ -243,7 +253,7 @@ const App = () => {
               <span>{language}: {count} translations</span>
             </li>
           ))}
-        </ul> 
+        </ul>
       </div>
 
 
