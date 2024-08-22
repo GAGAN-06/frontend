@@ -104,7 +104,6 @@ const App = () => {
             name="language"
             value="hi"
             checked={formData.language === "hi"}
-            checked={formData.language === "hi"}
             onChange={handleInputChange}
           />
           <label htmlFor="hi">Hindi</label>
@@ -115,7 +114,6 @@ const App = () => {
             name="language"
             value="es"
             checked={formData.language === "es"}
-            checked={formData.language === "es"}
             onChange={handleInputChange}
           />
           <label htmlFor="es">Spanish</label>
@@ -125,7 +123,6 @@ const App = () => {
             id="ja"
             name="language"
             value="ja"
-            checked={formData.language === "ja"}
             checked={formData.language === "ja"}
             onChange={handleInputChange}
           />
@@ -148,7 +145,6 @@ const App = () => {
             name="language"
             value="pt"
             checked={formData.language === "pt"}
-            checked={formData.language === "pt"}
             onChange={handleInputChange}
           />
           <label htmlFor="pt">Portugese</label>
@@ -161,7 +157,6 @@ const App = () => {
             name="model"
             value="gpt-3.5-turbo"
             checked={formData.model === "gpt-3.5-turbo"}
-            checked={formData.model === "gpt-3.5-turbo"}
             onChange={handleInputChange}
           />
           <label htmlFor="gpt-3.5-turbo"> GPT   3.5 T</label>
@@ -171,7 +166,6 @@ const App = () => {
             id="gpt-4"
             name="model"
             value="gpt-4"
-            checked={formData.model === "gpt-4"}
             checked={formData.model === "gpt-4"}
             onChange={handleInputChange}
           />
@@ -183,7 +177,6 @@ const App = () => {
             name="model"
             value="gpt-4-turbo"
             checked={formData.model === "gpt-4-turbo"}
-            checked={formData.model === "gpt-4-turbo"}
             onChange={handleInputChange}
           />
           <label htmlFor="gpt-4-turbo">GPT-4 T</label>
@@ -193,7 +186,6 @@ const App = () => {
             id="gemini-1.5-pro"
             name="model"
             value="gemini-1.5-pro"
-            checked={formData.model === "gemini-1.5-pro"}
             checked={formData.model === "gemini-1.5-pro"}
             onChange={handleInputChange}
           />
@@ -205,7 +197,6 @@ const App = () => {
             name="model"
             value="gemini-1.5-flash"
             checked={formData.model === "gemini-1.5-flash"}
-            checked={formData.model === "gemini-1.5-flash"}
             onChange={handleInputChange}
           />
           <label htmlFor="gemini-1.5-flash">G-1.5 flash</label>
@@ -215,7 +206,6 @@ const App = () => {
         <textarea
           name="message"
           placeholder="Type your message here.."
-          value={formData.message}
           value={formData.message}
           onChange={handleInputChange}
         ></textarea>
