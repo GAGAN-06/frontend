@@ -144,3 +144,39 @@ h1 {
   color: #d62839;
   font-size: 0.9rem;
 }
+
+/* Dropdown Styles */
+.container .dropdown {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.container select {
+  width: 150px;
+  padding:  10px 16px; /* Match padding with buttons */
+  font-size: 1.1rem; /* Font size to match other elements */
+  border: none; /* Remove default border */
+  border-radius: 15px; /* Match button border radius */
+  background: #a2d2ff; /* Button background color */
+  color: #023047; /* Text color */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background 0.3s ease; /* Smooth transition */
+}
+
+.container select:focus {
+  outline: none; /* Remove outline */
+  background: #023047; /* Change background on focus */
+  color: #fff; /* Change text color on focus */
+}
+
+/* Adjust Dropdown Arrow */
+.container select::-ms-expand {
+  display: none; /* Hide default dropdown arrow for IE */
+}
+
+.container select option {
+  background: #fff; /* Background for options */
+  color: #023047; /* Text color for options */
+}
