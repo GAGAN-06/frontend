@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BeatLoader } from "react-spinners";
+import { useNavigate } from "react-router-dom";
 
 const App = () => {
   const [formData, setFormData] = useState({ language: "", message: "" });
@@ -9,6 +10,7 @@ const App = () => {
   const [translation, setTranslation] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [languageStats, setLanguageStats] = useState({});
+  const navigate = useNavigate(); // For navigation
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -113,8 +115,10 @@ const App = () => {
     { label: "Chinese (Simplified)", value: "zh" },
     { label: "Hindi", value: "hi" }, // Add Hindi manually
   ];
-   // Create a mapping for language names
-   const languageNames = Object.fromEntries(Languages.map(lang => [lang.value, lang.label]));
+  // Create a mapping for language names
+  const languageNames = Object.fromEntries(
+    Languages.map((lang) => [lang.value, lang.label])
+  );
 
   return (
     <div className="container">
@@ -191,10 +195,16 @@ const App = () => {
         <ul>
           {Object.entries(languageStats).map(([languageCode, count]) => (
             <li key={languageCode}>
-              <span>{languageNames[languageCode] || languageCode}: {count} translations</span>
+              <span>
+                {languageNames[languageCode] || languageCode}: {count}{" "}
+                translations
+              </span>
             </li>
           ))}
         </ul>
+      </div>
+      <div>
+          <button onClick={() => navigate("/rate")}>Rate Translations</button>
       </div>
 
       <div className={`notification ${showNotification ? "active" : ""}`}>
