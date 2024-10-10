@@ -149,6 +149,8 @@ const App = () => {
             <option value="gpt-4-turbo">GPT-4 Turbo</option>
             <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
             <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
+            <option value="gemini-1.5-pro-002">Gemini 1.5 Pro 2</option>
+            <option value="gemini-1.5-flash-002">Gemini 1.5 Flash 2</option>
             <option value="deepl">DeepL</option>
           </select>
         </div>
