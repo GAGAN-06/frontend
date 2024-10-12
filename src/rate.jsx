@@ -64,7 +64,7 @@ const RateTranslations = () => {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      const data = await response.json(); 
       setTranslations(data);
       setRating(data.rating);
     } catch (error) {
@@ -110,7 +110,6 @@ const RateTranslations = () => {
           <h3>Translations:</h3>
           <p><strong>Gemini:</strong> {translations.geminiTranslation}</p>
           <p><strong>DeepL:</strong> {translations.deeplTranslation}</p>
-          <p><strong>OpenAI:</strong> {translations.openaiTranslation}</p>
           
           <h3>ChatGPT Rating:</h3>
           <p>{rating}</p>
