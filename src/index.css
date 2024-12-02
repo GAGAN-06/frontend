@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 .rate-select {
     padding: 10px;
     margin-bottom: 10px;

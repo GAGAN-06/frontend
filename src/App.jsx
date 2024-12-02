@@ -22,8 +22,8 @@ const App = () => {
 
     try {
       const response = await fetch(
-        "https://backend-vaeh.onrender.com/translate",
-        {
+        "http://localhost:5000/translate",
+        {     
           method: "POST",
           headers: {
             "Content-Type": "application/json",
