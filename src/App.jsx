@@ -22,7 +22,7 @@ const App = () => {
 
     try {
       const response = await fetch(
-        "https://backend-vaeh.onrender.com/translate",
+        "http://localhost:5000/translate",
         {     
           method: "POST",
           headers: {
@@ -132,6 +132,7 @@ const App = () => {
             value={formData.language}
             onChange={handleInputChange}
           >
+            <option>Pick Lang.</option>
             {Languages.map((lang) => (
               <option key={lang.value} value={lang.value}>
                 {lang.label}
@@ -148,9 +149,9 @@ const App = () => {
             value={formData.model}
             onChange={handleInputChange}
           >
+            <option>Pick model</option>
             <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
-            <option value="gpt-4">GPT-4</option>
-            <option value="gpt-4-turbo">GPT-4 Turbo</option>
+            <option value="gpt-4o">GPT-4o</option>
             <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
             <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
             <option value="gemini-1.5-pro-002">Gemini 1.5 Pro 2</option>

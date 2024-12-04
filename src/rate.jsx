@@ -75,7 +75,7 @@ const RateTranslations = () => {
     }
 
     try {
-      const response = await fetch("https://backend-vaeh.onrender.com/rate", {
+      const response = await fetch("http://localhost:5000/rate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -92,7 +92,7 @@ const RateTranslations = () => {
       const list = [
         { id: 'gemini', content: data.geminiTranslation, model: 'gemini-1.5-pro' },
         { id: 'deepl', content: data.deeplTranslation, model: 'deepl' },
-        { id: 'openai', content: data.openaiTranslation, model: 'gpt-3.5-turbo' }
+        { id: 'openai', content: data.openaiTranslation, model: 'gpt-4o' }
       ];
       setTranslationsList(list);
       
@@ -109,7 +109,6 @@ const RateTranslations = () => {
 
   const saveRankings = async () => {
     try {
-      const Lan = Languages[language]
       const rankings = translationsList.map((item, index) => ({        
         sourceText: formData.message,
         targetLanguage: formData.Lan,
